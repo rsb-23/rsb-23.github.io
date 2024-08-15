@@ -3,7 +3,7 @@
     <h2>Forgotten Password</h2>
     <h3>{{ story.name }}</h3>
     <div v-if="!gameOver">
-      <p>
+      <p class="prompt">
         {{ story.prompts[currentLevel] }}
       </p>
       <input
@@ -15,7 +15,10 @@
     <div class="progress-bar">
       <div class="progress-bar-fill" :style="{ width: progress + '%' }"></div>
     </div>
-    <p v-if="message">{{ message }}</p>
+    <p v-if="message && !gameOver">{{ message }}</p>
+    <p v-if="message && gameOver" :style="{ textAlign: story.msgAlign }">
+      {{ message }}
+    </p>
     <button v-if="gameOver" @click="resetStory">Play Again</button>
   </div>
 </template>
@@ -107,6 +110,8 @@ p {
   margin-top: 10px;
   font-size: 18px;
   white-space: pre-line;
+}
+.prompt {
   text-align: left;
 }
 </style>

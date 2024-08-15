@@ -1,11 +1,5 @@
 // data/passwordSets.js
 export const passwordStories = {
-  test: {
-    name: "test",
-    passwords: ["qwe"],
-    prompts: ["Enter qwe"],
-    successMsg: "test success",
-  },
   beginner: {
     name: "No Brainer",
     passwords: ["password", "incorrect", "again", "again later"],
@@ -27,7 +21,14 @@ export const passwordStories = {
       "You know what? \n It made me laugh when I heard it, but Pam got really offended.\n _____",
       "Try '*** ***** with a _'",
     ],
+    msgAlign: "left",
     successMsg:
       "That's...the password. We're in. \n Alright, Wow. \n Yes \n The important thing is this kept us secure, people.",
+  },
+  test: {
+    name: "test",
+    passwords: ["qwe"],
+    prompts: ["Enter qwe"],
+    successMsg: "test success",
   },
 };
