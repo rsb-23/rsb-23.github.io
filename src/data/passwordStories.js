@@ -13,7 +13,7 @@ export const passwordStories = {
   },
   advanced: {
     name: "The Office | TV series",
-    passwords: ["password", "00000000", "00000001", "big boobs", "big boobz"],
+    passwords: ["password", "000000", "000001", "big boobs", "big boobz"],
     prompts: [
       "Uh, it's saying the server went down. \n Does anybody know that password, cause otherwise, we can't do any work? \n Uh, try _____",
       "Hint: Nope.\n Try _____",

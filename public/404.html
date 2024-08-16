@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .meme {
+        max-width: 100%;
+        height: auto;
+        margin: 30px auto;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: darkcyan;
+      }
+      a:hover {
+        color: darkcyan;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .redirect {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px 20px;
+        font-size: 18px;
+        color: white;
+        background-color: #42b983;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .redirect:hover {
+        background-color: #35976e;
+        color: whitesmoke;
+      }
+
+      .flying-arrow {
+        position: absolute;
+        top: -10%;
+        left: -100px;
+        font-size: 10px;
+        animation: fly 20s linear infinite;
+      }
+      @keyframes fly {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(100vw);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flying-arrow">
+      <a href="https://youtu.be/usXxW1TnVyA?t=137" target="_blank">
+        <svg
+          version="1.2"
+          baseProfile="tiny"
+          xmlns="http://www.w3.org/2000/svg"
+          width="256"
+          height="256"
+          xml:space="preserve"
+        >
+          <switch>
+            <g>
+              <g
+                fill="none"
+                stroke="#333"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+              >
+                <path
+                  d="M44 130h164M194.463 152.188 212.325 130l-17.862-22.188"
+                />
+              </g>
+            </g>
+          </switch>
+        </svg>
+      </a>
+    </div>
+    <div class="content">
+      <h1>404 - Oops!</h1>
+      <h2 hidden>You Found a Black Hole!</h2>
+      <p hidden>
+        It seems you've wandered into the vast emptiness of the internet.<br />
+        Unfortunately, there's nothing here but the void.<br />
+        But don't worry, we can get you back on track!
+      </p>
+      <img src="meme.png" alt="Funny Meme" class="meme" width="600" />
+      <p>
+        <a class="redirect" href="/">Take Me Home</a>
+        <a class="redirect" href="/#/password-game">Play Forgotten Password</a>
+      </p>
+    </div>
+  </body>
+</html>

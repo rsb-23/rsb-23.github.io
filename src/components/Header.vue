@@ -2,7 +2,7 @@
   <header>
     <nav>
       <router-link to="/">Home</router-link>
-      <router-link to="/projects">Projects</router-link>
+      <!-- <router-link to="/projects">Projects</router-link> -->
       <router-link to="/password-game">Forgotten Password Game</router-link>
     </nav>
   </header>
@@ -18,7 +18,7 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 nav a {
