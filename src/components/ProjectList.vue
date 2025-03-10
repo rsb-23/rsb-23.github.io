@@ -1,10 +1,6 @@
 <template>
   <ul class="project-list">
-    <ProjectCard
-      v-for="project in projects"
-      :key="project.id"
-      :project="project"
-    />
+    <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
   </ul>
 </template>
 
@@ -16,7 +12,7 @@ export default {
   components: { ProjectCard },
   data() {
     return {
-      projects: projects,
+      projects: projects.sort((a, b) => a.id - b.id),
     };
   },
 };
@@ -25,7 +21,9 @@ export default {
 <style scoped>
 .project-list {
   list-style-type: none;
-  padding: 20;
-  margin: 20;
+  padding: 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 </style>

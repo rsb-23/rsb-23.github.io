@@ -14,6 +14,8 @@ header {
   color: #fff;
   padding: 20px;
   text-align: center;
+  font-size: large;
+  height: 2rem;
 }
 
 nav {

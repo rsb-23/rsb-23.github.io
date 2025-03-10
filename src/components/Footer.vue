@@ -21,9 +21,9 @@ export default {
 .footer {
   background-color: #333;
   color: #fff;
-  padding: 1rem;
+  padding-bottom: 0.8rem;
   text-align: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
