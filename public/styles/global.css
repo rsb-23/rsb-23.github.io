@@ -1,0 +1,42 @@
+/* Minimal Light Theme Colors */
+:root {
+  --primary-color: #f5f5f5; /* Soft light gray for background */
+  --secondary-color: #333; /* Dark gray for text */
+  --background-color: #ffffff; /* White for cards and sections */
+  --text-color: #444; /* Neutral dark gray for text */
+  --card-bg-color: #f9f9f9; /* Slightly off-white for cards */
+  --border-color: #e0e0e0; /* Light gray for borders */
+  --button-color: #e0e0e0;
+}
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif; /* Clean sans-serif font */
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+/* game buttons */
+button {
+  background-color: var(--button-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: var(--button-color);
+  transform: scale(1.1);
+}

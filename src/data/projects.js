@@ -1,6 +1,9 @@
-const repoUrl = "https://github.com/rsb-23";
+export const repoUrl = "https://github.com/rsb-23";
 const ghUrl = "https://projects.tchh.in";
+
+// don't add image value if url is a webpage or github repo.
 export default [
+  // Profile and websites
   {
     id: 1,
     name: "My Github Profile",
@@ -11,42 +14,28 @@ export default [
   },
   {
     id: 2,
-    name: "Miscellaneous",
-    description: "random eXperiments",
-    url: `${ghUrl}/misc`,
-    ghRepo: "misc",
-  },
-  {
-    id: 3,
-    name: "Digital Literacy",
-    description: "A quick guide to invoke digital literacy among people and secure their digital life.",
-    url: `${repoUrl}/digital-literacy`,
-    ghRepo: "digital-literacy",
-  },
-  {
-    id: 4,
     name: "AI Image Hallucinator",
     description: "High-on-AI : Surreal Image Gallery",
-    url: `${ghUrl}/high-on-ai`,
+    url: `https://high-on-ai.tchh.in`,
     ghRepo: "high-on-ai",
   },
   {
-    id: 5,
+    id: 3,
     name: "Infotainer",
     description: "Curated list of infotainment channels",
-    image: "infotainer.png",
-    url: `https://infotainer.tchh.in/`,
+    url: `https://infotainer.tchh.in`,
     ghRepo: "infotainer",
   },
   {
-    id: 6,
-    name: "Text Linter CI",
-    description: "Github action to check typos in diff",
-    url: `https://github.com/marketplace/actions/text-linter`,
-    ghRepo: "text-linter",
+    id: 4,
+    name: "Strawberry Counter",
+    description: "Counts the occurence of a letter in the text",
+    image: "strawberry.png",
+    url: "https://claude.site/artifacts/074a62b4-ee81-4af1-b719-da65670712fe",
   },
+  // Tools
   {
-    id: 7,
+    id: 11,
     name: "Yuhi CLI",
     description: "Python project improvement CLI toolkit",
     image: "pypi.svg",
@@ -54,53 +43,62 @@ export default [
     ghRepo: "yuhi",
   },
   {
-    id: 8,
-    name: "VObjectx package",
+    id: 12,
+    name: "vObjectx package",
     description: "py-vobject/vobject with new Python 3 syntax",
     image: "pypi.svg",
     url: "https://pypi.org/project/vobjectx",
     ghRepo: "vobjectx",
   },
   {
-    id: 11,
-    name: "right-to-be-forgotten",
-    description:
-      "“Right to be Forgotten” is a right to have private information removed from the internet search engine, database, websites or other public platforms.",
-    url: `${repoUrl}/right-to-be-forgotten`,
-    ghRepo: "right-to-be-forgotten",
+    id: 13,
+    name: "Text Linter CI",
+    description: "Github action to check typos in diff",
+    image: "repo.svg",
+    url: `https://github.com/marketplace/actions/text-linter`,
+    ghRepo: "text-linter",
   },
   {
-    id: 12,
+    id: 14,
     name: "Ek-Cup-Tcha",
     description: "AI based Captcha solver extension",
     url: `${repoUrl}/Ek-Cup-Tcha`,
     ghRepo: "Ek-Cup-Tcha",
   },
   {
-    id: 13,
-    name: "1page-automation",
+    id: 15,
+    name: "1-page Automation",
     description: "Simple browser-based automation using Selenium scripts",
     url: `${repoUrl}/1page-automation`,
     ghRepo: "1page-automation",
   },
+  // documentation projects
   {
-    id: 14,
+    id: 30,
+    name: "Digital Literacy",
+    description: "A quick guide to invoke digital literacy among people and secure their digital life.",
+    url: `${repoUrl}/digital-literacy`,
+    ghRepo: "digital-literacy",
+  },
+  {
+    id: 31,
     name: "Open Password Specification",
     description: "Standard specification for password generation and storage.",
     url: `${repoUrl}/open-pass-spec`,
     ghRepo: "open-pass-spec",
   },
   {
-    id: 15,
-    name: "Strawberry Counter",
-    description: "Counts the occurence of a letter in the text",
-    url: "https://claude.site/artifacts/074a62b4-ee81-4af1-b719-da65670712fe",
+    id: 32,
+    name: "Right to be Forgotten",
+    description: "A system to simplify and standardize protection of 'Right to Erasure'",
+    url: `${repoUrl}/right-to-be-forgotten`,
+    ghRepo: "right-to-be-forgotten",
   },
+  // fun stuff
   {
     id: 51,
     name: "Meme Funcs",
     description: "If memes were a python function...",
-    image: "meme.png",
     url: `${repoUrl}/meme-funcs`,
     ghRepo: "meme-funcs",
   },
@@ -108,8 +106,14 @@ export default [
     id: 52,
     name: "Past Horror",
     description: "Projects from 2010s",
-    image: "past_horror.png",
     url: `${ghUrl}/past-horror`,
     ghRepo: "past-horror",
+  },
+  {
+    id: 56,
+    name: "Miscellaneous",
+    description: "random eXperiments",
+    url: `${ghUrl}/misc`,
+    ghRepo: "misc",
   },
 ];

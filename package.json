@@ -1,6 +1,6 @@
 {
-  "name": "my-projects",
-  "version": "0.0.1",
+  "name": "open-projects",
+  "version": "0.1.0",
   "description": "A Vue app for showcasing projects",
   "main": "main.js",
   "scripts": {
