@@ -1,17 +1,11 @@
 <template>
-  <div>
-    <Header />
-    <ProjectList />
-    <Footer />
-  </div>
+  <ProjectList />
 </template>
 
 <script>
-import Header from "../components/Header.vue";
 import ProjectList from "../components/ProjectList.vue";
-import Footer from "../components/Footer.vue";
 
 export default {
-  components: { Header, ProjectList, Footer },
+  components: { ProjectList },
 };
 </script>

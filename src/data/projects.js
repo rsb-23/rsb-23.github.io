@@ -28,10 +28,10 @@ export default [
   },
   {
     id: 4,
-    name: "Strawberry Counter",
-    description: "Counts the occurence of a letter in the text",
-    image: "strawberry.png",
-    url: "https://claude.site/artifacts/074a62b4-ee81-4af1-b719-da65670712fe",
+    name: "Paper Games",
+    description: "Web version of games that can be played on paper.",
+    url: `${ghUrl}/paper-games`,
+    ghRepo: "paper-games",
   },
   // Tools
   {
@@ -108,6 +108,13 @@ export default [
     description: "Projects from 2010s",
     url: `${ghUrl}/past-horror`,
     ghRepo: "past-horror",
+  },
+  {
+    id: 54,
+    name: "Strawberry Counter",
+    description: "Counts the occurence of a letter in the text",
+    image: "strawberry.png",
+    url: "https://claude.site/artifacts/074a62b4-ee81-4af1-b719-da65670712fe",
   },
   {
     id: 56,

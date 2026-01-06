@@ -1,18 +1,12 @@
 <template>
-  <div>
-    <Header />
-    <ProjectDetail :project="project" />
-    <Footer />
-  </div>
+  <ProjectDetail :project="project" />
 </template>
 
 <script>
-import Header from "../components/Header.vue";
 import ProjectDetail from "../components/ProjectDetail.vue";
-import Footer from "../components/Footer.vue";
 
 export default {
-  components: { Header, ProjectDetail, Footer },
+  components: { ProjectDetail },
   data() {
     return {
       project: {},
