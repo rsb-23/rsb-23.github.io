@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: rsb-23/actions/checkout@v1
+      - uses: rsb-23/actions/checkout@main
 
       - uses: actions/setup-node@v6
         with:
@@ -25,7 +25,9 @@ jobs:
         run: npm run lint
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run ci:icons
+          npm run build
 
       - name: Deploy to GitHub Pages
         run: npm run deploy

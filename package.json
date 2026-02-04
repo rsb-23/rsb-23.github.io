@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "description": "A Vue app for showcasing projects",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "npm run build && gh-pages -d dist --cname projects.tchh.in"
+    "deploy": "npm run build && gh-pages -d dist --cname projects.tchh.in",
+    "ci:icons": "node scripts/fetch-favicons.js"
   },
   "dependencies": {
     "vue": "^3.5.26",
@@ -24,6 +26,7 @@
     "eslint-plugin-vue": "^8.0.3",
     "gh-pages": "^6.1.1",
     "postcss": "^8.4.39",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
     "vue-template-compiler": "",
     "webpack-dev-server": "^5.2.2"

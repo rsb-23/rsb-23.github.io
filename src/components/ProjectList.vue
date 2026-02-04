@@ -24,7 +24,7 @@ export default {
   padding: 10px;
   margin: 10px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 5px 20px;
   background-color: var(--card-bg-color);
   border-radius: 12px;

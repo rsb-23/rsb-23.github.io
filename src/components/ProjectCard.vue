@@ -9,30 +9,26 @@
 </template>
 
 <script>
-import { repoUrl } from "../data/projects";
 export default {
   props: ["project"],
   methods: {
     getImage() {
       let imageName = this.project.image;
       if (imageName == "" || imageName == undefined) {
-        imageName = "repo.svg";
-        let imageUrl = "";
-        const projectUrl = this.project.url;
-        if (projectUrl.startsWith(repoUrl)) {
-          imageUrl = `https://raw.githubusercontent.com/rsb-23/${this.project.ghRepo}/main/favicon.png`;
-        } else {
-          imageUrl = `${projectUrl}/favicon.png`;
-        }
-        imageName = imageUrl;
+        imageName = `${this.project.ghRepo}.png`;
       }
-      if (imageName.startsWith("https")) {
-        return imageName; //its a url
+      if (imageName.startsWith("http")) {
+        return imageName;
       }
-      return require(`@/assets/${imageName}`);
+      try {
+        return require(`@/assets/icons/${imageName}`);
+      } catch (error) {
+        return require("@/assets/icons/repo.svg");
+      }
     },
+
     handleImageError(event) {
-      event.target.src = require("@/assets/repo.svg");
+      event.target.src = require("@/assets/icons/repo.svg");
     },
     redirectToRepo() {
       const url = this.project.url;
@@ -58,8 +54,8 @@ export default {
 }
 
 .project-image {
-  width: 60px;
-  height: 60px;
+  width: clamp(60px, 8vw, 90px);
+  height: clamp(60px, 8vw, 90px);
   object-fit: cover;
   margin-right: 1rem;
 }
