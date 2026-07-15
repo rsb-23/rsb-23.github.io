@@ -4,6 +4,7 @@
 
 <script>
 import ProjectDetail from "../components/ProjectDetail.vue";
+import projects from "../data/projects";
 
 export default {
   components: { ProjectDetail },
@@ -12,11 +13,10 @@ export default {
       project: {},
     };
   },
-  // created() {
-  //   const projectId = this.$route.params.id;
-  //   fetch(`data/projects/${projectId}.json`)
-  //     .then((response) => response.json())
-  //     .then((data) => (this.project = data));
-  // },
+  created() {
+    const projectId = Number(this.$route.params.id);
+    const allProjects = Object.values(projects).flat();
+    this.project = allProjects.find((p) => p.id === projectId) || {};
+  },
 };
 </script>

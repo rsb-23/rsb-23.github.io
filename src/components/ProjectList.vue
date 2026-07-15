@@ -1,7 +1,12 @@
 <template>
-  <ul class="project-list">
-    <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
-  </ul>
+  <div class="project-sections">
+    <section v-for="(items, category) in projects" :key="category" class="project-section">
+      <h2 class="section-title">{{ category }}</h2>
+      <ul class="project-list">
+        <ProjectCard v-for="project in items" :key="project.id" :project="project" />
+      </ul>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -12,26 +17,43 @@ export default {
   components: { ProjectCard },
   data() {
     return {
-      projects: projects.sort((a, b) => a.id - b.id),
+      projects: projects,
     };
   },
 };
 </script>
 
 <style scoped>
+.project-sections {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+
+.project-section {
+  padding: 10px;
+}
+.section-title {
+  text-transform: capitalize;
+  margin: 0 10px 10px;
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+}
 .project-list {
   list-style-type: none;
   padding: 10px;
-  margin: 10px;
+  /* margin: 10px; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 5px 20px;
   background-color: var(--card-bg-color);
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .project-list li {
-  background-color: var(--card-bg-color);
+  /* background-color: var(--card-bg-color); */
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 15px;

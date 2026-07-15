@@ -20,7 +20,9 @@ function getImageUrl(ghRepo, projectUrl) {
   return imageUrl;
 }
 
-for (const { image, url, ghRepo } of projects) {
+const allProjects = Object.values(projects).flat();
+
+for (const { image, url, ghRepo } of allProjects) {
   if (image || !ghRepo) continue
   const outFile = path.join(OUT_DIR, `${ghRepo}.png`);
 
